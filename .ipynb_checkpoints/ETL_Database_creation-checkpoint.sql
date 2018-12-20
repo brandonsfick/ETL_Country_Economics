@@ -1,10 +1,17 @@
+# Creating database and tables for the load process of ETL
 Create database World_economics;
+
 Use World_economics;
+
+Create table country (
+id int Not null auto_increment,
+country text,
+Primary Key (id)
+);
 
 Create table Unemployment (
 id int Not null auto_increment,
-Countries text,
-Youth_Unemployment decimal(9,6),
+Youth_unemployment decimal(9,6),
 Primary Key (id));
 
 Create table Economic_freedom (
@@ -13,20 +20,10 @@ year INT,
 Countries text,
 Economic_Freedom decimal (3,2),
 Rank decimal (4,1),
-Government_Consumption decimal (10,8),
+Government_Consumption decimal (8,7),
 Gov_Enterprises	decimal (3,1),
 Top_Marg_Tax_Rate decimal (3,1),
 Trade decimal (7,6),
 Labor_Market_Reg decimal (7,6),
 Business_Reg decimal (7,6),
 Primary Key (id));
-
-SELECT * FROM Economic_freedom;
-SELECT * FROM Unemployment;
-
-
--- Example query
-SELECT Economic_freedom.Countries, Unemployment.Youth_Unemployment
-FROM Economic_freedom
-JOIN Unemployment
-ON Economic_freedom.Countries = Unemployment.Countries;
