@@ -6,7 +6,8 @@ Project Owners: Maria Jadoon and Brandon Fick
 Perform ETL for data used to compare world economic KPIs.
 
 ## Extract: Data Sources
-Youth Unemployment dataset - retrieved from the World Bank repository (.csv)
+Youth Unemployment dataset - retrieved from the World Bank repository (.csv) https://data.worldbank.org/indicator/SL.UEM.1524.ZS 
+
 Economic Freedom dataset – retrieved from the Fraser Institute repository (.csv) https://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2018-annual-report
 
 ## Transformation
