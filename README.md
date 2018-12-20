@@ -28,4 +28,8 @@ Step by Step process for ETL Ecomoic Freedom Process:
 5. Find ETL_Grp_Prj.ipynb in folder "Mystuff" and open in jupyter lab.
 6. Run each cell. Note: You will see an error when loading the data into the database. This is due to the change in decimal places. You can ignore these warnings.
 7. Open MySql workbench and check the database World Economics to verify the data was correctly loaded.
-8. Now run basic joins such as
+8. Now run basic joins such as:
+SELECT Economic_freedom.Countries, Unemployment.Youth_Unemployment
+FROM Economic_freedom
+JOIN Unemployment
+ON Economic_freedom.Countries = Unemployment.Countries;
