@@ -20,7 +20,12 @@ You will be required to submit a final technical report with the above informati
 
 At the end of the week, your team will submit a Final Report that describes the following:
 
-
-Extract: your original data sources and how the data was formatted (CSV, JSON, MySQL, etc).
-Transform: what data cleaning or transformation was required.
-Load: the final database, tables/collections, and why this was chosen.
+Step by Step process for ETL Ecomoic Freedom Process:
+1. Go to the world bank and download the Youth unemployment rate .csv.
+2. Go to https://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2018-annual-report and download the annual report as a .csv.
+3. Open Youth unemployment file and delete columns 1970-2015. Pandas will incur an error if this step is missed.
+4. Move both files into folder "Mystuff."
+5. Find ETL_Grp_Prj.ipynb in folder "Mystuff" and open in jupyter lab.
+6. Run each cell. Note: You will see an error when loading the data into the database. This is due to the change in decimal places. You can ignore these warnings.
+7. Open MySql workbench and check the database World Economics to verify the data was correctly loaded.
+8. Now run basic joins such as
